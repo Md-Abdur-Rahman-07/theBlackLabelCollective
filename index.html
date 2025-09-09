@@ -61,7 +61,7 @@
                         <div class="icon"> <i class="flaticon-phone-call"></i> </div>
                         <div class="text">
                             <p>RESERVATION</p>
-                            <h5><a href="tel:+14703164308">+1 (470) 316-4308</a></h5>
+                            <h5><a href="tel:+15129795806">+1 512-979-5806</a></h5>
                         </div>
                     </div>
                 </div>
@@ -108,6 +108,121 @@
             </div>
         </div>
     </header>
+    <section class="container">
+        <h1 style="color: #fff; font-weight: 400; margin: 4rem 0 3rem 0;">Our Services</h1>
+        <!-- Services 1 -->
+        <div class="rooms1 row">
+
+            <!-- Airport Transfers -->
+            <div class="col-md-6 col-12">
+                <div class="item">
+                    <div class="position-re o-hidden">
+                        <img src="images/airpot.jpg" alt="Airport Transfers">
+                    </div>
+                    <div class="con">
+                        <h5>Airport Transfers</h5>
+                        <p>Arrive in comfort and on time, every time.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weddings & Special Occasions -->
+            <div class="col-md-6 col-12">
+                <div class="item">
+                    <div class="position-re o-hidden">
+                        <img src="images/wed.jpg" alt="Weddings & Special Occasions">
+                    </div>
+                    <div class="con">
+                        <h5>Weddings & Special Occasions</h5>
+                        <p>Travel with elegance on your most memorable day.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Custom Events -->
+            <div class="col-md-6 col-12">
+                <div class="item">
+                    <div class="position-re o-hidden">
+                        <img src="images/custom.jpg" alt="Corporate & VIP Travel">
+                    </div>
+                    <div class="con">
+                       <h5>Custom Events</h5>
+                        <p>Crafted journeys to match your vision.</p> <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Corporate & VIP Travel -->
+            <div class="col-md-6 col-12">
+                <div class="item">
+                    <div class="position-re o-hidden">
+                        <img src="images/corporate.jpg" alt="Corporate & VIP Travel">
+                    </div>
+                    <div class="con">
+                        <h5>Corporate & VIP Travel</h5>
+                        <p>Discreet, punctual, and polished — tailored for the executive.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+          
+
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="sec-head text-start">
+                <h1 style="color: #fff; font-weight: 400; margin: 4rem 0 1rem 0;">What Our Clients Say</h1>
+
+                <p>Rated for luxury and reliability</p>
+            </div>
+
+            <div class="owl-carousel owl-theme testimonial-carousel">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Black Label Collective made my airport transfer seamless. Truly world-class service."</p>
+                    <h6>- James R.</h6>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Our wedding transport was elegant and punctual. The drivers were professional and friendly."</p>
+                    <h6>- Emily & David</h6>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"I booked them for a corporate event. Luxury vehicles, discreet drivers — exactly what I needed."
+                    </p>
+                    <h6>- Michael S.</h6>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-item">
+                    <div class="stars">★★★★☆ </div>
+                    <p>"Exceptional service. The attention to detail makes every ride memorable."</p>
+                    <h6>- Sarah L.</h6>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-item">
+                    <div class="stars">★★★★★</div>
+                    <p>"Custom package for our event — flawless from start to finish. Highly recommend."</p>
+                    <h6>- Robert K.</h6>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer clearfix">
@@ -124,7 +239,7 @@
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Call us</h6>
-                                        <p>+1 (470) 316-4308</p>
+                                        <p>+1 512-979-5806</p>
                                     </div>
                                 </div>
                                 <div class="footer-contact-links-divider"></div>
@@ -134,7 +249,7 @@
                                     </div>
                                     <div class="footer-contact-link-content">
                                         <h6>Write to us</h6>
-                                        <p>jahleellaurent@theblacklabelcollective.co</p>
+                                        <p>info@theblacklabelcollective.co</p>
                                     </div>
                                 </div>
                                 <div class="footer-contact-links-divider"></div>
@@ -208,6 +323,24 @@
     </footer>
 
     <!-- jQuery -->
+    <script>
+        $(document).ready(function () {
+            $(".testimonial-carousel").owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 600,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1200: { items: 3 }
+                }
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

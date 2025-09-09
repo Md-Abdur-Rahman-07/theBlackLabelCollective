@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel+Decorative:wght@400;700;900&family=Gilda+Display&display=swap');
 
 html,
 body {
@@ -20,20 +20,154 @@ body {
 
 body {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1..5px;
     line-height: 1.95em;
-    color: #999;
+    color: #ffffff;
     overflow-x: hidden !important;
     background: #1b1b1b;
 }
 
+
+.testimonials {
+    margin-top: 50px;
+    padding-bottom: 70px;
+    background: #111;
+}
+
+.sec-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sec-head h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec-head p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.testimonial-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+    aspect-ratio: 1/0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.testimonial-item h6 {
+    font-size: 14px;
+    color: #aa8453;
+    margin: 0;
+}
+
+.stars {
+    font-size: 18px;
+    color: gold;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.rooms1 .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.rooms1 .item img {
+    width: 100%;
+    transition: all 0.5s ease;
+    aspect-ratio: 1/0.65;
+    object-fit: cover;
+}
+
+/* Zoom image on hover */
+.rooms1 .item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay covers full image */
+.rooms1 .item .con {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* content stays bottom */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    /* base overlay */
+    transition: background 0.4s ease-in-out;
+}
+
+/* Overlay gets slightly darker on hover */
+.rooms1 .item:hover .con {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.rooms1 .item .con h5 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+/* Paragraph */
+.rooms1 .item .con p {
+    color: #ddd;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+/* White line animation */
+.rooms1 .item .line {
+    height: 1px;
+    width: 0;
+    background: #fff;
+    transition: width 0.5s ease-in-out;
+}
+
+.rooms1 .item:hover .line {
+    width: 100%;
+}
+
 p {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
     line-height: 1.95em;
-    color: #999;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -67,8 +201,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Gilda Display", serif;
     font-weight: 700;
+    letter-spacing: 1.5px;
     line-height: 1.5em;
     margin: 0 0 15px 0;
     color: #1b1b1b;
@@ -710,7 +845,7 @@ hr {
 
 .owl-theme .owl-nav {
     top: 45% !important;
-    
+
 }
 
 .owl-theme .owl-nav [class*=owl-] {
@@ -895,17 +1030,21 @@ hr {
         font-size: 20px;
 
     }
+
     h1.title {
         font-size: 30px;
         letter-spacing: 10px !important;
     }
+
     .logo .t-gold {
         font-size: 30px;
     }
-    .logo-wrapper{
+
+    .logo-wrapper {
         padding: 0 10px !important;
     }
-    nav.navbar{
+
+    nav.navbar {
         height: auto;
     }
 }
@@ -951,7 +1090,7 @@ hr {
 }
 
 .title {
-     color: #fff;
+    color: #fff;
     font-family: "Cinzel Decorative", serif;
     text-transform: lowercase;
     font-size: 40px;
@@ -982,7 +1121,7 @@ hr {
 
 .ab-center {
     width: 100%;
-   
+
     z-index: 9;
     position: absolute;
     top: 55%;
@@ -1108,8 +1247,8 @@ hr {
 }
 
 .navbar .navbar-right .wrap .text p {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
     line-height: 12px;
     color: #fff;
     margin-bottom: 4px;
@@ -4153,7 +4292,7 @@ hr {
 
 .footer-contact-link-wrapper h6 {
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 0px;
     font-weight: 700;
 }
@@ -4229,7 +4368,7 @@ hr {
 
 .copyright p {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .copyright p a {
