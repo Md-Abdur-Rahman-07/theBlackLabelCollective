@@ -10,6 +10,10 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 
 <body>
@@ -50,11 +54,11 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
 
 
 
-                    <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="navbar-right">
                     <div class="wrap">
@@ -108,7 +112,7 @@
             </div>
         </div>
     </header>
-    <section class="container">
+    <section class="container" id="service">
         <h1 style="color: #fff; font-weight: 400; margin: 4rem 0 3rem 0;">Our Services</h1>
         <!-- Services 1 -->
         <div class="rooms1 row">
@@ -141,20 +145,21 @@
                 </div>
             </div>
 
-              <!-- Custom Events -->
+            <!-- Custom Events -->
             <div class="col-md-6 col-12">
                 <div class="item">
                     <div class="position-re o-hidden">
                         <img src="images/custom.jpg" alt="Corporate & VIP Travel">
                     </div>
                     <div class="con">
-                       <h5>Custom Events</h5>
-                        <p>Crafted journeys to match your vision.</p> <div class="line"></div>
+                        <h5>Custom Events</h5>
+                        <p>Crafted journeys to match your vision.</p>
+                        <div class="line"></div>
                     </div>
                 </div>
             </div>
 
-            
+
             <!-- Corporate & VIP Travel -->
             <div class="col-md-6 col-12">
                 <div class="item">
@@ -169,7 +174,7 @@
                 </div>
             </div>
 
-          
+
 
         </div>
     </section>
@@ -224,6 +229,119 @@
         </div>
     </section>
 
+    <section class="contact container p-md-5 p-4">
+           <div class="sec-head text-center">
+                <h1 style="color: #fff; font-weight: 400; margin: 1rem 0 1rem 0;">Request a Quote</h1>
+
+               
+            </div>
+        <form method="post" action="mail/mail.php">
+
+            <div class="position-relative switch-wrapper d-flex align-items-center my-4">
+                <input type="radio" name="type" id="hour" value="Hourly" checked>
+                <label for="hour"
+                    class="switch-label flex-grow-1 text-center cursor-pointer p-2 rounded-pill">Hourly</label>
+
+                <input type="radio" name="type" id="round" value="Round Trip">
+                <label for="round" class="switch-label flex-grow-1 text-center cursor-pointer p-2 rounded-pill">Round
+                    Trip</label>
+
+                <div class="switch-bg position-absolute"></div>
+            </div>
+
+            <div class="row g-4 pt-4">
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder=" " required class="form-control py-3">
+                        <i class="fas fa-user input-icon"></i>
+                        <label for="name" class="floating-label">Full Name</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" " required class="form-control py-3">
+                        <i class="fas fa-phone input-icon"></i>
+                        <label for="phone" class="floating-label">Phone Number</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder=" " required class="form-control py-3">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <label for="email" class="floating-label">Email Address</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="datetime" name="datetime" placeholder=" "
+                            onfocus="(this.type='datetime-local')" onblur="(this.type='text')" required
+                            class="form-control py-3">
+                        <i class="fas fa-calendar-alt input-icon"></i>
+                        <label for="datetime" class="floating-label">Date & Time</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="number" id="passanger" name="passanger" placeholder=" " required min="1"
+                            class="form-control py-3">
+                        <i class="fas fa-users input-icon"></i>
+                        <label for="passanger" class="floating-label">Number Of Riders</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="pickup" name="pickup" placeholder=" " required class="form-control py-3">
+                        <i class="fas fa-map-marker-alt input-icon"></i>
+                        <label for="pickup" class="floating-label">Pickup Location</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="dropoff" name="dropoff" placeholder=" " required
+                            class="form-control py-3">
+                        <i class="fas fa-map-pin input-icon"></i>
+                        <label for="dropoff" class="floating-label">Drop Off Location</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="number" id="long" name="long" placeholder=" " min="0" class="form-control py-3">
+                        <i class="fas fa-hourglass-half input-icon"></i>
+                        <label for="long" class="floating-label">Length (in hours)</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="addTrip" name="addTrip" placeholder=" " class="form-control py-3">
+                        <i class="fas fa-route input-icon"></i>
+                        <label for="addTrip" class="floating-label">Additional stops?</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="input-group">
+                        <textarea id="add" name="add" placeholder=" " rows="4" class="form-control py-3"></textarea>
+                        <label for="add" class="floating-label">Additional Details</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <button type="submit" class="btn submit-btn w-100 p-3 fs-5">
+                    Request a Quote
+                </button>
+            </div>
+        </form>
+    </section>
     <!-- Footer -->
     <footer class="footer clearfix">
         <div class="container">
@@ -322,6 +440,38 @@
         </div>
     </footer>
 
+
+    <script>
+        flatpickr("#datetime", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            minDate: "today",
+            minuteIncrement: 1,
+            time_24hr: true,
+            onReady: function (selectedDates, dateStr, instance) {
+                setMinMaxTime(instance);
+            },
+            onChange: function (selectedDates, dateStr, instance) {
+                setMinMaxTime(instance);
+            },
+        });
+
+        function setMinMaxTime(instance) {
+            const currentDate = instance.selectedDates[0] || new Date();
+            const today = new Date();
+            const isToday = currentDate.toDateString() === today.toDateString();
+
+            const minTime = isToday ? Math.max(today.getHours() + 1, 9) + ":00" : "09:00";
+            const maxTime = "18:00";
+
+            instance.set("minTime", minTime);
+            instance.set("maxTime", maxTime);
+
+            if (isToday && currentDate.getHours() >= 18) {
+                instance.clear(); // Clear date if outside allowed time range
+            }
+        }
+    </script>
     <!-- jQuery -->
     <script>
         $(document).ready(function () {
@@ -346,19 +496,8 @@
         crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-migrate-3.4.1.min.js"></script>
-    <!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
-    <!-- <script src="js/imagesloaded.pkgd.min.js"></script> -->
-    <!-- <script src="js/jquery.isotope.v3.0.2.js"></script> -->
-    <!-- <script src="js/popper.min.js"></script> -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/scrollIt.min.js"></script>
-    <!-- <script src="js/jquery.waypoints.min.js"></script> -->
     <script src="js/owl.carousel.min.js"></script>
-    <!-- <script src="js/jquery.stellar.min.js"></script> -->
-    <!-- <script src="js/jquery.magnific-popup.js"></script> -->
-    <!-- <script src="js/select2.js"></script> -->
-    <!-- <script src="js/datepicker.js"></script> -->
-    <!-- <script src="js/YouTubePopUp.js"></script> -->
     <script src="js/custom.js"></script>
 </body>
 
