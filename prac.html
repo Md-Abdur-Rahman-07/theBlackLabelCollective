@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Golden Glass Card</title>
+<style>
+  :root{
+    --gold-100: 255 223 128; /* RGB for warm gold */
+    --gold-200: 255 215 0;
+    --glass-bg: rgba(255,255,255,0.06);
+    --glass-border: rgba(255,215,0,0.18);
+    --card-radius: 16px;
+  }
+
+  /* Page */
+  body{
+    min-height:100vh;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(255,223,128,0.04), transparent 10%),
+      linear-gradient(180deg,#0b0e12 0%, #071019 60%);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #f7f6f3;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding: 48px;
+  }
+
+  /* Container for demo layout */
+  .wrap {
+    display:grid;
+    gap:24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    align-items:start;
+    justify-content:center;
+  }
+
+  /* Glass card */
+  .glass-card{
+    position:relative;
+    overflow:hidden;
+    border-radius: var(--card-radius);
+    padding: 22px;
+    min-height: 180px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      0 6px 18px rgba(3,6,10,0.6),
+      0 0 28px rgba(var(--gold-200),0.05);
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+    isolation:isolate;
+  }
+
+  /* subtle golden glow line at top-left */
+  .glass-card::before{
+    content: "";
+    position: absolute;
+    left: -30%;
+    top: -30%;
+    width: 160%;
+    height: 60%;
+    transform: rotate(-18deg);
+    background: linear-gradient(90deg,
+      rgba(var(--gold-100),0.12) 0%,
+      rgba(var(--gold-200),0.06) 45%,
+      rgba(255,255,255,0.02) 100%);
+    pointer-events: none;
+    filter: blur(10px);
+    opacity: .9;
+    mix-blend-mode: screen;
+  }
+
+  /* animated shine on hover */
+  .glass-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(120deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.0) 40%, rgba(255,255,255,0.02) 60%, rgba(var(--gold-100),0.06) 100%);
+    transform: translateX(-120%);
+    transition: transform .9s cubic-bezier(.2,.7,.2,1);
+    pointer-events:none;
+    mix-blend-mode: overlay;
+  }
+
+  .glass-card:hover{
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+      0 18px 40px rgba(3,6,10,0.6),
+      0 0 60px rgba(var(--gold-200),0.12);
+  }
+  .glass-card:hover::after{ transform: translateX(0); }
+
+  /* Card content */
+  .card-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .badge{
+    display:inline-grid;
+    place-items:center;
+    width:44px;height:44px;
+    border-radius:10px;
+    background: linear-gradient(180deg, rgba(var(--gold-100),0.12), rgba(var(--gold-200),0.06));
+    border: 1px solid rgba(var(--gold-200),0.14);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35) inset;
+    font-weight:700;
+    color: rgb(var(--gold-200));
+    font-size:16px;
+  }
+  h3{
+    margin:0;
+    font-size:18px;
+    letter-spacing:0.2px;
+  }
+  p.lead{
+    margin:6px 0 14px;
+    opacity:.85;
+    font-size:13px;
+    color:#e9e7e3;
+  }
+
+  .meta{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    align-items:center;
+  }
+  .price{
+    font-weight:700;
+    font-size:18px;
+    color: rgb(var(--gold-200));
+    text-shadow: 0 1px 0 rgba(255,255,255,0.02);
+  }
+
+  .btn{
+    display:inline-block;
+    padding:9px 14px;
+    border-radius:10px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    background: linear-gradient(180deg, rgba(var(--gold-100),0.12), rgba(var(--gold-200),0.06));
+    color: #071019;
+    border: 1px solid rgba(var(--gold-200),0.18);
+    box-shadow: 0 6px 18px rgba(3,6,10,0.4);
+    transition: transform .18s, box-shadow .18s;
+  }
+  .btn:active{ transform: translateY(1px); box-shadow: 0 5px 12px rgba(3,6,10,0.36); }
+
+  /* small subtle decorative text */
+  .muted{
+    font-size:12px;
+    opacity:.7;
+    color:#d9d6d2;
+  }
+
+  /* responsive niceties */
+  @media (max-width:420px){
+    body{ padding:20px; }
+    .glass-card{ padding:16px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="glass-card" role="article" aria-label="Premium plan card">
+      <header class="card-head">
+        <div class="badge">G</div>
+        <div>
+          <h3>Premium Access</h3>
+          <div class="muted">Limited early-bird offer</div>
+        </div>
+      </header>
+
+      <p class="lead">A slightly golden frosted card with soft glow — great for premium products, pricing cards, or hero callouts.</p>
+
+      <div class="meta">
+        <div>
+          <div class="price">$29<span class="muted">/mo</span></div>
+          <div class="muted" style="margin-top:6px">Billed monthly</div>
+        </div>
+        <div style="align-self:center">
+          <a class="btn" href="#" role="button">Get it</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- second sample with different text -->
+    <article class="glass-card" role="article" aria-label="VIP invite card">
+      <header class="card-head">
+        <div class="badge">★</div>
+        <div>
+          <h3>VIP Invite</h3>
+          <div class="muted">Exclusive member pass</div>
+        </div>
+      </header>
+
+      <p class="lead">Use this style for invitations, cards, or product highlights where you want a luxe, warm accent without overpowering gold.</p>
+
+      <div class="meta">
+        <div class="muted">Limited seats</div>
+        <div>
+          <a class="btn" href="#" role="button">Reserve</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

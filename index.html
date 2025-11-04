@@ -10,7 +10,10 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -37,7 +40,7 @@
 
             <div class="logo-wrapper">
                 <a class="logo" href="index.html">
-                   <img style="width: 135px; margin-top: 0.7rem;" src="images/logo.png" alt="">
+                    <img style="width: 110px; margin-top: 0.4rem;" src="img/logo.png" alt="">
                 </a>
 
             </div>
@@ -84,7 +87,7 @@
                             </span>
                             <h3 class="sub-title">Refined Journeys. Unforgettable Impressions.</h3>
                             <h1 class="title animated fadeInUp">Enjoy a luxury <br> experience</h1>
-                            <a href="" class="btn-1 animated fadeInLeft">
+                            <a href="#quote" class="btn-1 animated fadeInLeft">
                                 Request Your Luxury Transfer
                             </a>
                         </div>
@@ -95,14 +98,14 @@
         <div class="owl-carousel owl-theme">
 
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="item bg-img" data-overlay-dark="7" data-background="images/bg1.jpg">
+            <div class="item bg-img" data-overlay-dark="7" data-background="img/bg1.jpg">
 
             </div>
-            <div class="item bg-img" data-overlay-dark="7" data-background="images/bg2.jpg">
+            <div class="item bg-img" data-overlay-dark="7" data-background="img/bg2.jpg">
 
 
             </div>
-            <div class="item bg-img" data-overlay-dark="7" data-background="images/bg3.jpg">
+            <div class="item bg-img" data-overlay-dark="7" data-background="img/bg3.jpg">
 
 
             </div>
@@ -117,7 +120,7 @@
             <div class="col-md-6 col-12">
                 <div class="item">
                     <div class="position-re o-hidden">
-                        <img src="images/airpot.jpg" alt="Airport Transfers">
+                        <img src="img/airpot.jpg" alt="Airport Transfers">
                     </div>
                     <div class="con">
                         <h5>Airport Transfers</h5>
@@ -131,7 +134,7 @@
             <div class="col-md-6 col-12">
                 <div class="item">
                     <div class="position-re o-hidden">
-                        <img src="images/wed.jpg" alt="Weddings & Special Occasions">
+                        <img src="img/wed.jpg" alt="Weddings & Special Occasions">
                     </div>
                     <div class="con">
                         <h5>Weddings & Special Occasions</h5>
@@ -145,7 +148,7 @@
             <div class="col-md-6 col-12">
                 <div class="item">
                     <div class="position-re o-hidden">
-                        <img src="images/custom.jpg" alt="Corporate & VIP Travel">
+                        <img src="img/custom.jpg" alt="Corporate & VIP Travel">
                     </div>
                     <div class="con">
                         <h5>Custom Events</h5>
@@ -160,7 +163,7 @@
             <div class="col-md-6 col-12">
                 <div class="item">
                     <div class="position-re o-hidden">
-                        <img src="images/corporate.jpg" alt="Corporate & VIP Travel">
+                        <img src="img/corporate.jpg" alt="Corporate & VIP Travel">
                     </div>
                     <div class="con">
                         <h5>Corporate & VIP Travel</h5>
@@ -225,12 +228,12 @@
         </div>
     </section>
 
-    <section class="contact container p-md-5 p-4">
-           <div class="sec-head text-center">
-                <h1 style="color: #fff; font-weight: 400; margin: 1rem 0 1rem 0;">Request a Quote</h1>
+    <section class="contact container p-md-5 p-4" id="quote">
+        <div class="sec-head text-center">
+            <h1 style="color: #fff; font-weight: 400; margin: 1rem 0 1rem 0;">Request a Quote</h1>
 
-               
-            </div>
+
+        </div>
         <form method="post" action="mail/mail.php">
 
             <div class="position-relative switch-wrapper d-flex align-items-center my-4">
@@ -338,6 +341,64 @@
             </div>
         </form>
     </section>
+    <!-- recommendation -->
+    <section class=" recommendation" style="background-color: black;">
+        <div class="container py-4">
+            <div class="sec-head text-start ">
+                <h1 style="color: #fff; font-weight: 400; margin: 1rem 0 1rem 0;">Recommendations</h1>
+
+
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="rec-card">
+                        <div class="image-frame">
+                            <img src="images/l5.jpg" alt="Wine tasting experience">
+                        </div>
+                        <div class="body">
+                            <h4>The Grape Escape</h4>
+                            <a href="winery.html"><button class="empty">Explore Wineries</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rec-card">
+                        <div class="image-frame">
+                            <img src="images/l13.jpg" alt="Brewery tour experience">
+                        </div>
+                        <div class="body">
+                            <h4>Pint Paradise</h4>
+                            <a href="brewery.html"><button class="empty">Discover Breweries</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rec-card">
+                        <div class="image-frame">
+                            <img src="images/l23.jpg" alt="Food tour experience">
+                        </div>
+                        <div class="body">
+                            <h4>The Munch Map</h4>
+                            <a href="food.html"><button class="empty">Find Restaurants</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="rec-card">
+                        <div class="image-frame">
+                            <img src="images/l39.png" alt="Nightlife experience">
+                        </div>
+                        <div class="body">
+                            <h4>Night Life</h4>
+                            <a href="night-life.html"><button class="empty">Explore Nightlife</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
     <!-- Footer -->
     <footer class="footer clearfix">
         <div class="container">
@@ -387,9 +448,9 @@
                     <!-- about & social icons -->
                     <div class="col-md-4 widget-area text-center">
                         <div class="widget clearfix">
-                         <a class="logo" href="index.html">
-                   <img style="width: 155px; margin-top: 1.5rem;" src="images/logo.png" alt="">
-                </a>
+                            <a class="logo" href="index.html">
+                                <img style="width: 155px;" src="img/logo.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <!-- quick links -->
