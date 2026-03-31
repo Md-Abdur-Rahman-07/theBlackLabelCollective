@@ -112,13 +112,13 @@ const data = [
   // Best Eats Places
   {
     id: 11,
-    name: "Daygos - San Diego Taco Shop",
+    name: "LeRoy and Lewis Barbecue",
     description:
-      "Welcome to Daygos, Austin's slice of San Diego taco heaven! Nestled in the heart of Texas, this vibrant taco shop brings the laid-back coastal vibes of Southern California right to your plate. Picture this: palm tree murals, surfboards on the walls, and a soundtrack of beachside tunes setting the scene as you step inside. The menu? A tantalizing fusion of Baja-inspired flavors meets Tex-Mex flair. Crispy fish tacos bursting with freshness, carne asada fries piled high with savory toppings, and California-style burritos stuffed to perfection. Whether you're a local longing for a taste of San Diego or a taco enthusiast exploring Austin's diverse culinary scene, Daygos promises a fiesta of flavors that will transport your taste buds straight to sunny California shores. Ole! ",
-    address: "1209 East Cesar Chavez Street Austin, TX 78702",
-    phone: "(619) 431 0337",
-    website: "https://www.daygossandiegotacoshop.com",
-    image: "images/l34.jpg",
+      "What started as a food truck in 2017 is now in a spacious location in Garrison Park. The moniker refers to the duo of married couples who run this enticing operation where the setting gives off midcentury vibes with its glazed brick exterior and peak-roofed dining area. The excellent barbecue menu isn't built around brisket, although that beloved item is available as a daily special at the end of the week. In fact, several specials keep things interesting throughout the week, such as spice-crusted, melt-in-your mouth beef cheeks or the daily sausage which may be studded with Hatch green chiles and mozzarella cheese. The banana pudding tiramisu is a clever hybrid with coffee-soaked Nilla wafers.",
+    address: "5621 Emerald Forest Dr., Austin, TX, 78745, USA",
+    phone: "(512) 945-9882",
+    website: "https://leroyandlewisbbq.com/",
+    image: "images/leroy.webp",
   },
   {
     id: 12,
@@ -132,13 +132,13 @@ const data = [
   },
   {
     id: 13,
-    name: "Cuantos Tacos 🌮",
+    name: "Granny's Tacos",
     description:
-      "Cuantos Tacos offers a taste of authentic Mexican street food right in Austin. Known for their delicious and innovative tacos, this food truck serves up a variety of mouthwatering options that are sure to satisfy your taco cravings. Whether you’re in the mood for traditional or creative flavors, Quantos Tacos delivers an unforgettable culinary experience.",
-    address: "1108 E 12th St, Austin, TX 78702",
-    phone: "(512) 669-5352",
-    website: "https://www.cuantostacosaustin.com",
-    image: "images/l11.webp",
+      "Enjoy Our Delicious Mexican Food! Come and Join Us To Our New Beer, Cocktails and Coffee Bar; Dinning Room and Lounge! <br> Infusing traditional flavors with a modern twist, we pride ourselves on serving authentic dishes bursting with the rich culinary heritage of Mexico.",
+    address: "1401 East 7th Street Austin TX 78702",
+    phone: "(512) 701-4000",
+    website: "https://www.grannystacosatx.com/",
+    image: "images/gt.jpg",
   },
   {
     id: 14,
@@ -497,6 +497,16 @@ const data = [
     phone: "+15124312133",
     website: "http://www.cheerupcharlies.com/",
   },
+    {
+    id: 49,
+    name: "Two Hands Hospitality",
+    description:
+      "Two Hands Hospitality is a group of community-focused Australian restaurants that fuel your lifestyle with fresh, delicious food, cocktails, and coffee. We serve breakfast through dinner and focus on community, sustainability, and local sourcing. With a health-conscious and forward-thinking culinary approach, Two Hands serves mindful meals to enjoy all day, every day.",
+    image: "images/two.jpg",
+    address: "1011 South Congress Ave, Austin, Texas",
+    phone: "(512) 866-2713",
+    website: "https://www.twohandshospitality.com/",
+  }
 ];
 
 // Function to populate card with data
